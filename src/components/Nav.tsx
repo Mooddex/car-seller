@@ -5,10 +5,10 @@ import Button from "./Button";
 export default function Navbar() {
   return (
     <nav className="w-full py-4 shadow-sm bg-white">
-      <div className="grid grid-cols-3 items-center m-2.5 mx-auto">
+      <div className="grid grid-cols-3 items-center m-2.5 mx-auto px-5">
 
         {/* Logo */}
-        <div className="flex items-center pl-14">
+        <div className="flex items-center">
           <Image
             width={120}
             height={120}
@@ -29,7 +29,7 @@ export default function Navbar() {
         </div>
 
         {/* Action Button */}
-        <div className="flex justify-end pr-13">
+        <div className="flex justify-end ">
           <Button Sentence={"Order Now"} Style="" />
         </div>
       </div>
