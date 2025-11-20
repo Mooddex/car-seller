@@ -4,12 +4,11 @@ import bgImage from "@/assets/Section2bg.png";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full 100vh  flex items-center p-35">
+    <section className="relative w-full h-100vh  flex items-center p-35">
       {/* Background Image */}
       <Image
         alt="Car"
         src={bgImage}
-        quality={100}
         fill
         className="object-cover"
       />
