@@ -11,7 +11,7 @@ export default function Cars() {
   return (
     <section className=" my-12 p-6 space-y-10">
       {/* first section */}
-      <div className="bg-[#F6F6F6] grid grid-cols-2 gap-5">
+      <div className="bg-[#F6F6F6] grid sm:grid-cols-2 gap-5">
         {/* 1st division */}
         <div className="">
           <Image src={car7Img} alt="Car Image" />
@@ -38,7 +38,7 @@ export default function Cars() {
         </div>
       </div>
       {/* 2nd section*/}
-      <div className="bg-[#F6F6F6] grid grid-cols-2 p-6 gap-8">
+      <div className="bg-[#F6F6F6] grid sm:grid-cols-2 p-6 gap-8">
       <Image src={leftImg} alt="Car Image" />
       <div className="m-12">
         <h1 className="text-orange-400 text-3xl mb-3 ">
@@ -50,7 +50,7 @@ export default function Cars() {
       </div>
       </div>
       {/* third division */}
-      <div className="bg-[#F6F6F6] grid grid-cols-2 p-6 gap-8">
+      <div className="bg-[#F6F6F6] grid sm:grid-cols-2 p-6 gap-8">
         <div className="m-12">
         <h1 className="text-orange-400 text-3xl mb-3 ">
           sb inu parae monol

@@ -6,14 +6,8 @@ export default function HeroSection() {
   return (
     <section className="relative w-full h-100vh  flex items-center p-35">
       {/* Background Image */}
-      <Image
-        alt="Car"
-        src={bgImage}
-        fill
-        className="object-cover"
-      />
+      <Image alt="Car" src={bgImage} fill className="object-cover" />
 
-      
       {/* Content */}
       <div className="relative w-50%   text-white ">
         <h1 className="text-4xl font-bold  ">
@@ -27,15 +21,18 @@ export default function HeroSection() {
           </h3>
 
           <p className="text-white font-bold max-w-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Dolorem necessitatibus labo
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            necessitatibus labo
           </p>
         </div>
 
         {/* Buttons */}
         <div className="mt-8 flex gap-4">
-          <Button Sentence="Explore More"  />
-          <Button Sentence="See Cars" Style="bg-transparent border-orange-500 border-2 " />
+          <Button Sentence="Explore More" />
+          <Button
+            Sentence="See Cars"
+            Style="bg-transparent border-orange-500 border-2 "
+          />
         </div>
       </div>
     </section>

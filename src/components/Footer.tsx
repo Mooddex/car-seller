@@ -2,68 +2,87 @@ import Image from "next/image";
 import logoFooter from "@/assets/Logofooter.svg";
 import Button from "./Button";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+
 export default function Footer() {
   return (
-    <footer className="bg-black">
-      <div className="flex flex-col">
-        <div className="bg-black p-12 text-white flex justify-between">
+    <footer className="bg-black text-white">
+      <div className="flex flex-col md:mx-12">
+
+        {/* TOP SECTION */}
+        <div className="p-12 flex flex-col md:flex-row justify-between gap-10">
+
+          {/* Logo */}
           <div>
             <Image src={logoFooter} alt="logo" />
           </div>
-          <div className="grid grid-cols-4 ">
+
+          {/* Links */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+
             <div>
-              <h2>Mobile app</h2>
-              <ul>
+              <h2 className="font-semibold mb-3">Mobile app</h2>
+              <ul className="space-y-2 text-gray-300">
                 <li>Features</li>
                 <li>Live Share</li>
                 <li>Video Record</li>
               </ul>
             </div>
+
             <div>
-              <h2>Community</h2>
-              <ul>
+              <h2 className="font-semibold mb-3">Community</h2>
+              <ul className="space-y-2 text-gray-300">
                 <li>Features</li>
                 <li>Live Share</li>
                 <li>Video Record</li>
               </ul>
             </div>
+
             <div>
-              <h2>Company</h2>
-              <ul>
+              <h2 className="font-semibold mb-3">Company</h2>
+              <ul className="space-y-2 text-gray-300">
                 <li>About us</li>
                 <li>Contact us</li>
-                <li>history</li>
+                <li>History</li>
               </ul>
             </div>
-            <div className="flex flex-col gap-5 ml-6 ">
+
+            {/* Buttons */}
+            <div className="flex flex-col gap-4">
               <Button Sentence="Register" />
-              <Button Sentence="Log in" Style="bg-white text-orange-500 " />
+              <Button
+                Sentence="Log in"
+                Style="bg-white text-orange-500 rounded-lg"
+              />
             </div>
+
           </div>
         </div>
-        {/* under line */}
-        <div className=" border-t border-orange-600 flex justify-between m-4 p-9 text-white">
-            <h2 className="text-white">@2025 By Mahmoud Salama</h2>
-        <div className="flex gap-3 text-3xl items-center">
-            <h2 className=" mr-6 text-2xl font-light">Follow us</h2>
-            <button className="border border-orange-500 bg-orange-600 p-3 rounded-3xl">
-                <Linkedin  />
-            </button>
-            <button className="border border-orange-500 bg-orange-600 p-3 rounded-3xl">
-                <Instagram />
-            </button>
-            <button className="border border-orange-500 bg-orange-600 p-3 rounded-3xl">
-                <Facebook />
-            </button>
-            <button className="border border-orange-500 bg-orange-600 p-3 rounded-3xl">
-            <Twitter />
-            </button>
-            
-            
-            
 
+        {/* BOTTOM SECTION */}
+        <div className="border-t border-orange-600 flex flex-col md:flex-row justify-between items-center px-9 py-6">
+
+          <h2 className="text-gray-300">@2025 By Mahmoud Salama</h2>
+
+          <div className="flex items-center gap-4 mt-6 md:mt-0">
+            <h2 className="text-xl font-light mr-4">Follow us</h2>
+
+            {/* SOCIAL ICONS */}
+            {[
+              <Linkedin />,
+              <Instagram />,
+              <Facebook />,
+              <Twitter />,
+            ].map((Icon, i) => (
+              <button
+                key={i}
+                className="border border-orange-500 bg-orange-600 p-3 rounded-full"
+              >
+                {Icon}
+              </button>
+            ))}
+          </div>
         </div>
-        </div>
+
       </div>
     </footer>
   );
